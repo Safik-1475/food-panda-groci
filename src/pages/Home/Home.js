@@ -1,10 +1,12 @@
 import React from 'react';
+import Footer from '../Footer';
 import Landing from './Landing';
 
 const Home = () => {
     return (
         <>
             <Landing />
+            <Footer />
         </>
     );
 };
