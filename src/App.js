@@ -1,9 +1,19 @@
+import Navbar from "./components/Navbar";
+import { PublicRoutes } from "./routes/PublicRoutes";
+import { Routes, Route } from 'react-router-dom';
+
 function App() {
   return (
-    <div>
-      <h1 className="text-5xl">Hello Tailwind</h1>
-      <button className="btn btn-primary">Hello</button>
-    </div>
+    <Navbar>
+      <Routes>
+        {/* PUBLIC ROUTES */}
+        {
+          PublicRoutes.map(({ path, Component }, index) => (
+            <Route key={index} path={path} element={<Component />} />
+          ))
+        }
+      </Routes>
+    </Navbar>
   );
 }
 
